@@ -41,15 +41,35 @@ html, body{
   backdrop-filter: blur(6.7px) !important;
   -webkit-backdrop-filter: blur(6.7px) !important;
   border: 1px solid rgba(255, 84, 112, 0.59) !important;
+
+}
+.checkbox-group{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  align-content: flex-start;
+  align-self: flex-start;
+  margin-left: 20px;
+}
+label:last-child{
+  margin-bottom: 20px;
+}
+label:first-child{
+  margin-top:20px;
+}
+input[type='checkbox']{
+  margin: 10px;
 }
 .list-container{
   z-index: 1 !important;
+  
 }
 .list{
  list-style-type: none;
 }
 li{
-  margin: 5px;
+  margin: 10px;
 }
 .dropdown-item:hover{
   background-color: transparent !important;
@@ -71,7 +91,7 @@ li{
 .btn-dropdown:hover{
   font-weight: 700;
 }
-.col-5.glass:hover{
+.col-7.glass:hover{
   background: rgba(0, 235, 199, 0.50);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -116,4 +136,6 @@ li{
     transform:translateX(25%);
   }
 }
+
+
 
