@@ -48,9 +48,18 @@ html, body{
   flex-direction: column;
 }
 label{
+  display: block;
+  position: relative;
   align-content: flex-start;
   align-self: flex-start;
   margin-left: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-left: 35px;
+  cursor: pointer;
+  font-weight: 500;
 }
 label:last-child{
   margin-bottom: 20px;
@@ -59,7 +68,36 @@ label:first-child{
   margin-top:20px;
 }
 input[type='checkbox']{
-  margin: 10px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 25px;
+  width: 25px;
+  z-index: 10;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: var(--lowcontrast);
+}
+label:hover{
+  font-weight: 700;
+}
+label:hover input ~ .checkmark{
+  background-color: var(--highcontrast);
+}
+input:checked ~ .checkmark {
+  background-color: var(--highcontrast);
+}
+label:hover input:checked ~.checkmark{
+background-color: var(--lowcontrast);
 }
 .list-container{
   z-index: 1 !important;
