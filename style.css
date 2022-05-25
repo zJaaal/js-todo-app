@@ -58,11 +58,9 @@ label{
   -ms-user-select: none;
   user-select: none;
   padding-left: 35px;
+  padding-bottom: 20px;
   cursor: pointer;
   font-weight: 500;
-}
-label:last-child{
-  margin-bottom: 20px;
 }
 label:first-child{
   margin-top:20px;
@@ -96,6 +94,16 @@ label:hover input ~ .checkmark{
 input:checked ~ .checkmark {
   background-color: var(--highcontrast);
 }
+
+.pencil{
+  padding-left: 40px;
+  height: 15px;
+}
+
+.pencil:hover{
+  height: 20px;
+}
+
 label:hover input:checked ~.checkmark{
 background-color: var(--lowcontrast);
 }
