@@ -89,7 +89,7 @@ label:hover{
   font-weight: 700;
 }
 label:hover input ~ .checkmark{
-  background-color: var(--highcontrast);
+  background-color: var(--complementary);
 }
 input:checked ~ .checkmark {
   background-color: var(--highcontrast);
@@ -104,9 +104,6 @@ input:checked ~ .checkmark {
   height: 20px;
 }
 
-label:hover input:checked ~.checkmark{
-background-color: var(--lowcontrast);
-}
 .list-container{
   z-index: 1 !important;
   
