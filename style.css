@@ -1,8 +1,119 @@
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Plus Jakarta Sans', Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
+html, body{
+  height: 100%;
+  width: 100%;
+}
+:root{
+  --white:#fbfcfc;
+  --black:#0d214d;
+  --highcontrast:#00ebc7;
+  --lowcontrast:#ff5470;
+  --complementary: #fde24f;
+}
+.col-6{
+  margin-right: 20px;
+}
+.glass{
+  /* From https://css.glass */
+  background:  rgba(251, 252, 252, 0.75);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.2px);
+  -webkit-backdrop-filter: blur(12.2px);
+  border: 1px solid rgba(251, 252, 252, 0.3);
+}
+.dropdown{
+  margin-bottom: 10px;
+  z-index: 10;
+}
+.dropdown-menu{
+  background-color: rgba(255, 84, 112, 0.75) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(6.7px) !important;
+  -webkit-backdrop-filter: blur(6.7px) !important;
+  border: 1px solid rgba(255, 84, 112, 0.59) !important;
+}
+.list-container{
+  z-index: 1 !important;
+}
+.list{
+ list-style-type: none;
+}
+li{
+  margin: 5px;
+}
+.dropdown-item:hover{
+  background-color: transparent !important;
+  font-weight: 700;
+}
+.btn-dropdown{
+  outline: none !important;
+  border: none;
+  display: inline-block;
+  width: fit-content;
+  height: 40px;
+  background-color: transparent;
+  font-size: 1.1em;
+}
+.btn-dropdown:focus{
+  background-color: transparent;;
+
+}
+.btn-dropdown:hover{
+  font-weight: 700;
+}
+.col-5.glass:hover{
+  background: rgba(0, 235, 199, 0.50);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.7px);
+  -webkit-backdrop-filter: blur(6.7px);
+  border: 1px solid rgba(0, 235, 199, 0.3);
+}
+
+
+
+
+
+
+
+/* Background */
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, var(--highcontrast) 50%, var(--complementary) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
