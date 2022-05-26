@@ -10,19 +10,15 @@ const useState = (key, value) => state[key] = value;
 const toggleCheck = (e) =>{
     useState("actualCheckbox", e.target.previousElementSibling);
     useState("actualLabel", e.target.parentElement);
-    console.log(state.actualLabel);
-    if(!state.actualCheckbox.checked){
-        state.actualCheckbox.checked = false;
-    }
-    console.log(state.actualCheckbox);
-        state.actualCheckbox.checked = state.actualCheckbox.checked ? false : true;
+
+    state.actualCheckbox.checked = !state.actualCheckbox.checked;
         if(state.actualCheckbox.checked){
             e.target.classList.add("checked");
             state.actualLabel.classList.add("checked");
             return;
         }
-        e.target.classList.remove("checked");
-        state.actualLabel.classList.remove("checked");
+    e.target.classList.remove("checked");
+    state.actualLabel.classList.remove("checked");
 
 }
 const hoverAction = (e) =>{
