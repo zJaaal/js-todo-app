@@ -74,7 +74,6 @@ input[type='checkbox']{
   opacity: 0;
   height: 25px;
   width: 25px;
-  z-index: 10;
 }
 .checkmark {
   position: absolute;
@@ -88,13 +87,17 @@ input[type='checkbox']{
 label:hover{
   font-weight: 700;
 }
-label:hover input ~ .checkmark{
+.checkmark.hover{
   background-color: var(--complementary);
 }
-input:checked ~ .checkmark {
+.checkmark.checked {
   background-color: var(--highcontrast);
 }
-
+label.checked{
+  text-decoration: line-through;
+  text-decoration-color: var(--lowcontrast);
+  text-decoration-style: double;
+}
 .pencil{
   padding-left: 40px;
   height: 15px;
