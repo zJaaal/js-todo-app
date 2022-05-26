@@ -4,6 +4,7 @@ const state ={
     actualCheckbox:{},
     actualLabel:{}
 }
+
 const useState = (key, value) => state[key] = value;
 
 const toggleCheck = (e) =>{
