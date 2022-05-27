@@ -1,7 +1,14 @@
 
 import { projects } from "./state";
+import { addStylesEventListener } from "./style-events";
 const renderCurrentProject = (e) =>{
-    const index = e.target.getAttribute("id");
+    let index;
+    
+    if(!e){
+        index = "0";
+    }else
+        index = e.target.getAttribute("id");
+
     const btnText = document.querySelector(".btn-text");
     btnText.innerHTML = projects[index].name;
 
@@ -15,6 +22,7 @@ const renderCurrentProject = (e) =>{
     })
 
     checkboxGroup.appendChild(fragment);
+    addStylesEventListener();
 }
 
 const createGroupRow = (task, index) =>{
@@ -44,3 +52,5 @@ const dropdownItems = document.querySelectorAll(".dropdown-item");
 dropdownItems.forEach(element =>{
     element.addEventListener("click", renderCurrentProject);
 })
+
+renderCurrentProject();
