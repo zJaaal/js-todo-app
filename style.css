@@ -118,13 +118,81 @@ label.checked {
 .btn-dropdown:hover {
   font-weight: 700;
 }
-.col-7.glass:hover {
-  background: rgba(0, 235, 199, 0.5);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.7px);
-  -webkit-backdrop-filter: blur(6.7px);
-  border: 1px solid rgba(0, 235, 199, 0.3);
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.edit-title {
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: 700;
+}
+.edit-name {
+  background-color: transparent;
+  border-color:rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  width: 20.3em;
+}
+.dismiss {
+  margin-right: 5px;
+}
+.dismiss::before, .resolve::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition:width 0.3s ease-in-out;
+  z-index: -2;
+  border-radius: inherit;
+}
+.dismiss::before {
+  background-color: var(--lowcontrast);
+}
+.resolve::before{
+  background-color:#4ee92f;
+}
+.dismiss:hover::before, .resolve:hover::before,
+.dismiss:focus:before, .resolve:focus::before{
+  width: 100%;
+}
+
+.dismiss, .resolve {
+  border: none;
+  outline: none !important;
+  transition:color 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  border-color:rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  border-radius: 24px;
+  height: 40px;
+  width: 10em;
+  background-color: transparent;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.powered {
+  margin-top: 20px;
+  color: var(--lowcontrast);
+  font-weight: 900;
+}
+
+.name {
+font-style: italic;
+color:var(--black);
+font-weight: 900;
 }
 
 /* Background */

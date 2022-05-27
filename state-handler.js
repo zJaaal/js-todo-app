@@ -1,6 +1,7 @@
 
 import { projects } from "./state.js";
 import { addStylesEventListener } from "./style-events.js";
+import { createGroupRow, createProject } from "./utilities.js";
 const renderCurrentProject = (e) =>{
     let index;
     
@@ -24,28 +25,6 @@ const renderCurrentProject = (e) =>{
     checkboxGroup.appendChild(fragment);
     addStylesEventListener();
 }
-
-const createGroupRow = (task, index) =>{
-        const div = document.createElement("div");
-        div.setAttribute("style", "display: flex; flex-grow: 1; align-items: center; justify-content: space-between;");
-        div.innerHTML = (`<div style="display: flex; flex: 1; flex-grow: 1; align-items: center;">
-        <input type="checkbox" id="checkbox-${index}"/>
-        <span class="checkmark"></span>
-        <label for="" class="group-row">${task.toDo}</label>
-      </div>
-      <img class="pencil" src="pencil.svg" alt="">`);     
-    
-    return div;
-}
-const createProject = (project) =>{
-    projects.push({
-        "name": project,
-        "tasks":[{
-            "toDo":"You can edit me!",
-            "isDone": false
-        }]
-    });
-} 
 
 const dropdownItems = document.querySelectorAll(".dropdown-item");
 
