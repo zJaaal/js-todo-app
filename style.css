@@ -1,5 +1,5 @@
 #app {
-  font-family: 'Plus Jakarta Sans', Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Plus Jakarta Sans", Avenir, Helvetica, Arial, sans-serif;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -7,45 +7,45 @@
   color: #2c3e50;
   margin-top: 60px;
 }
-html, body{
+html,
+body {
   height: 100%;
   width: 100%;
 }
-:root{
-  --white:#fbfcfc;
-  --black:#0d214d;
-  --highcontrast:#00ebc7;
-  --lowcontrast:#ff5470;
+:root {
+  --white: #fbfcfc;
+  --black: #0d214d;
+  --highcontrast: #00ebc7;
+  --lowcontrast: #ff5470;
   --complementary: #fde24f;
 }
-.glass{
+.glass {
   /* From https://css.glass */
-  background:  rgba(251, 252, 252, 0.75);
+  background: rgba(251, 252, 252, 0.75);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12.2px);
   -webkit-backdrop-filter: blur(12.2px);
   border: 1px solid rgba(251, 252, 252, 0.3);
 }
-.dropdown{
+.dropdown {
   margin-bottom: 10px;
   z-index: 10;
 }
-.dropdown-menu{
+.dropdown-menu {
   background-color: rgba(255, 84, 112, 0.75) !important;
   border-radius: 16px !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
   backdrop-filter: blur(6.7px) !important;
   -webkit-backdrop-filter: blur(6.7px) !important;
   border: 1px solid rgba(255, 84, 112, 0.59) !important;
-
 }
-.checkbox-group{
+.checkbox-group {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-.group-row{
+.group-row {
   display: flex;
   position: relative;
   align-items: center;
@@ -57,7 +57,7 @@ html, body{
   cursor: pointer;
   font-weight: 500;
 }
-input[type='checkbox']{
+input[type="checkbox"] {
   opacity: 0;
 }
 .checkmark {
@@ -67,43 +67,43 @@ input[type='checkbox']{
   border-radius: 50%;
   background-color: var(--lowcontrast);
 }
-.group-row:hover{
+.group-row:hover {
   font-weight: 700;
 }
-.checkmark.hover{
+.checkmark.hover {
   background-color: var(--complementary);
 }
 .checkmark.checked {
   background-color: var(--highcontrast);
 }
-label.checked{
+label.checked {
   text-decoration: line-through;
   text-decoration-color: var(--lowcontrast);
   text-decoration-style: double;
 }
-.pencil{
+.pencil {
   margin-right: 5px;
   height: 15px;
 }
 
-.pencil:hover{
+.pencil:hover {
   height: 20px;
   cursor: pointer;
 }
-.dropdown-item:hover{
+.dropdown-item:hover {
   background-color: transparent !important;
   font-weight: 700;
 }
-.add-project{
+.add-project {
   padding-left: 24px;
   background-color: transparent !important;
   border: none;
   outline: none !important;
 }
-.add-project:hover{
+.add-project:hover {
   font-weight: 700;
 }
-.btn-dropdown{
+.btn-dropdown {
   outline: none !important;
   border: none;
   display: inline-block;
@@ -112,15 +112,14 @@ label.checked{
   background-color: transparent;
   font-size: 1.1em;
 }
-.btn-dropdown:focus{
-  background-color: transparent;;
-
+.btn-dropdown:focus {
+  background-color: transparent;
 }
-.btn-dropdown:hover{
+.btn-dropdown:hover {
   font-weight: 700;
 }
-.col-7.glass:hover{
-  background: rgba(0, 235, 199, 0.50);
+.col-7.glass:hover {
+  background: rgba(0, 235, 199, 0.5);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.7px);
@@ -128,42 +127,37 @@ label.checked{
   border: 1px solid rgba(0, 235, 199, 0.3);
 }
 
-
-
-
-
-
-
 /* Background */
 .bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, var(--highcontrast) 50%, var(--complementary) 50%);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    var(--highcontrast) 50%,
+    var(--complementary) 50%
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
 }
 
 .bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
 }
 
 .bg3 {
-  animation-duration:5s;
+  animation-duration: 5s;
 }
 
 @keyframes slide {
   0% {
-    transform:translateX(-25%);
+    transform: translateX(-25%);
   }
   100% {
-    transform:translateX(25%);
+    transform: translateX(25%);
   }
 }
-
-
-
