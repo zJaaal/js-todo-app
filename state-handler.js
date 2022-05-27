@@ -1,6 +1,6 @@
 
-import { projects } from "./state";
-import { addStylesEventListener } from "./style-events";
+import { projects } from "./state.js";
+import { addStylesEventListener } from "./style-events.js";
 const renderCurrentProject = (e) =>{
     let index;
     
