@@ -1,4 +1,4 @@
- import { projects } from "/js/state.js";
+ import { projects } from "../js/state.js";
  
  export const createGroupRow = (task, index) =>{
     const div = document.createElement("div");
@@ -6,7 +6,7 @@
     div.innerHTML = (`<div style="display: flex; flex: 1; flex-grow: 1; align-items: center;">
     <input type="checkbox" id="checkbox-${index}"/>
     <span class="checkmark"></span>
-    <label for="" class="group-row">${task.toDo}</label>
+    <label for="checkbox-${index}" class="group-row">${task.toDo}</label>
   </div>
   <img class="pencil" src="pencil.svg" alt="">`);     
 
