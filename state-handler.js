@@ -1,6 +1,5 @@
-import { addEventListeners } from "./style-events";
-import { projects } from "./state";
 
+import { projects } from "./state";
 const renderCurrentProject = (e) =>{
     const index = e.target.getAttribute("id");
     const btnText = document.querySelector(".btn-text");
@@ -14,34 +13,21 @@ const renderCurrentProject = (e) =>{
     projects[index].tasks.forEach( (task, i) =>{
         fragment.appendChild(createGroupRow(task, i));
     })
+
     checkboxGroup.appendChild(fragment);
-    addEventListeners();
 }
 
 const createGroupRow = (task, index) =>{
-    let label = document.createElement("label");
-
-    label.setAttribute("for","");
-    label.classList.add("group-row");
-    label.innerHTML = task.toDo;
-
-    let input = document.createElement("input");
-
-    input.setAttribute("type", "checkbox");
-    input.setAttribute("id", index.toString());
-
-    let span = document.createElement("span");
-    span.classList.add("checkmark");
-
-    let img = document.createElement("img");
-    img.classList.add("pencil");
-    img.setAttribute("src", "pencil.svg");
-
-    label.appendChild(input);
-    label.appendChild(span);
-    label.appendChild(img);
-
-    return label;
+        const div = document.createElement("div");
+        div.setAttribute("style", "display: flex; flex-grow: 1; align-items: center; justify-content: space-between;");
+        div.innerHTML = (`<div style="display: flex; flex: 1; flex-grow: 1; align-items: center;">
+        <input type="checkbox" id="checkbox-${index}"/>
+        <span class="checkmark"></span>
+        <label for="" class="group-row">${task.toDo}</label>
+      </div>
+      <img class="pencil" src="pencil.svg" alt="">`);     
+    
+    return div;
 }
 const createProject = (project) =>{
     projects.push({
