@@ -1,3 +1,9 @@
+let isTouchscreen = false;
+
+const disableHover = () => {isTouchscreen = true; window.removeEventListener("touchstart", disableHover);};
+
+window.addEventListener("touchstart", disableHover);
+
 export const addStylesEventListener = () => {
     const checkboxes = document.querySelectorAll(".checkmark");
 
@@ -25,10 +31,18 @@ export const addStylesEventListener = () => {
 
     }
     const hoverAction = (e) =>{
+        if(isTouchscreen)
+            return;
+        useState("actualLabel", e.target.nextElementSibling);
         e.target.classList.add("hover");
+        state.actualLabel.classList.add("hover");
     }
     const blurAction = (e) =>{
+        if(isTouchscreen)
+            return;
+        useState("actualLabel", e.target.nextElementSibling);
         e.target.classList.remove("hover");
+        state.actualLabel.classList.remove("hover");
     }
     checkboxes.forEach(element =>{
         element.addEventListener("click", toggleCheck);

@@ -54,7 +54,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: pointer;
   font-weight: 500;
 }
 input[type="checkbox"] {
@@ -67,7 +66,7 @@ input[type="checkbox"] {
   border-radius: 50%;
   background-color: var(--lowcontrast);
 }
-.group-row:hover {
+.group-row.hover {
   font-weight: 700;
 }
 .checkmark.hover {
@@ -82,7 +81,7 @@ label.checked {
   text-decoration-style: double;
 }
 .pencil {
-  margin-right: 5px;
+  margin-right: 8px;
   height: 15px;
 }
 

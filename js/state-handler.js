@@ -1,7 +1,7 @@
 
-import { projects } from "./state.js";
-import { addStylesEventListener } from "./style-events.js";
-import { createGroupRow, createProject } from "./utilities.js";
+import { projects } from "/js/state.js";
+import { addStylesEventListener } from "/js/style-events.js";
+import { createGroupRow, createProject } from "/js/utilities.js";
 const renderCurrentProject = (e) =>{
     let index;
     
