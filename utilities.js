@@ -1,4 +1,4 @@
- import { projects } from "./state";
+ import { projects } from "./state.js";
  
  export const createGroupRow = (task, index) =>{
     const div = document.createElement("div");
