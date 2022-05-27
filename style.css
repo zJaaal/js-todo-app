@@ -43,13 +43,10 @@ html, body{
 .checkbox-group{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  width: 100%;
+  flex: 1;
 }
 .group-row{
   display: flex;
-  flex-direction: row-reverse;
   position: relative;
   align-items: center;
   padding-top: 5px;
@@ -64,7 +61,7 @@ input[type='checkbox']{
   opacity: 0;
 }
 .checkmark {
-  margin-left: 10px;
+  margin-right: 10px;
   height: 25px;
   width: 25px;
   border-radius: 50%;
@@ -85,18 +82,20 @@ label.checked{
   text-decoration-style: double;
 }
 .pencil{
-  margin-left: 10px;
+  margin-right: 5px;
   height: 15px;
 }
 
 .pencil:hover{
   height: 20px;
+  cursor: pointer;
 }
 .dropdown-item:hover{
   background-color: transparent !important;
   font-weight: 700;
 }
 .add-project{
+  padding-left: 24px;
   background-color: transparent !important;
   border: none;
   outline: none !important;
