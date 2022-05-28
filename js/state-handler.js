@@ -21,6 +21,7 @@ const renderTasks = () =>{
     let fragment = document.createDocumentFragment();
     if(tasks.length == 0){
         fragment.appendChild(createGroupRow("Add new tasks!", false, 0));
+        tasks.push({"toDo":"Add new tasks!", "isDone": false});
     }else{
         tasks.forEach((task, i) =>{
             fragment.appendChild(createGroupRow(task.toDo, task.isDone, i));
@@ -31,6 +32,8 @@ const renderTasks = () =>{
 }
 
 const editTask = (e) =>{
+    dismissBtn.disabled = false;
+    resolveBtn.disabled = false;
     editInput.disabled = false;
     setCurrentTask(+e.target.getAttribute("id"));
     editInput.value = tasks[currentTask].toDo;
@@ -55,17 +58,23 @@ const saveEdit = () =>{
 
     editInput.value = "";
     editInput.disabled = true;
+    dismissBtn.disabled = true;
+    resolveBtn.disabled = true;
 }
 
 const eraseTask = () =>{
     if(currentTask == undefined)
         return;
+
     tasks.splice(currentTask,1);
     renderTasks();
     addFormEventListeners();
     alert("Task has been remove!");
     editInput.value = "";
     editInput.disabled = true;
+
+    dismissBtn.disabled = true;
+    resolveBtn.disabled = true;
 }
 const createTask = () =>{
 
