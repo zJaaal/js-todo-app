@@ -19,10 +19,13 @@ const renderTasks = () =>{
     checkboxGroup.innerHTML = "";
 
     let fragment = document.createDocumentFragment();
-
-    tasks.forEach((task, i) =>{
-        fragment.appendChild(createGroupRow(task.toDo, task.isDone, i));
-    })
+    if(tasks.length == 0){
+        fragment.appendChild(createGroupRow("Add new tasks!", false, 0));
+    }else{
+        tasks.forEach((task, i) =>{
+            fragment.appendChild(createGroupRow(task.toDo, task.isDone, i));
+        })
+    } 
     checkboxGroup.appendChild(fragment);
     addStylesEventListener();
 }
@@ -83,7 +86,6 @@ createBtn.addEventListener("click", createTask);
 function addFormEventListeners(){
 const editBtns = document.querySelectorAll(".pencil");
     editBtns.forEach((btn) =>{
-        console.log(btn);
         btn.addEventListener("click",editTask);
     });
 }
