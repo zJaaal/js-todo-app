@@ -130,7 +130,7 @@ label.checked {
 .dismiss {
   margin-right: 5px;
 }
-.dismiss::before, .resolve::before{
+.glass-btn::before{
   content: "";
   position: absolute;
   width: 0;
@@ -141,18 +141,22 @@ label.checked {
   z-index: -2;
   border-radius: inherit;
 }
+.create::before {
+  background-color: var(--black);
+}
 .dismiss::before {
   background-color: var(--lowcontrast);
 }
 .resolve::before{
   background-color:#4ee92f;
 }
-.dismiss:hover::before, .resolve:hover::before,
-.dismiss:focus:before, .resolve:focus::before{
+.glass-btn:hover::before {
   width: 100%;
 }
-
-.dismiss, .resolve {
+.glass-btn:hover{
+  color: var(--white);
+}
+.glass-btn {
   border: none;
   outline: none !important;
   transition:color 0.3s ease-in-out;

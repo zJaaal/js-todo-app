@@ -1,3 +1,4 @@
+import { tasks } from "../js/state.js";
 let isTouchscreen = false;
 
 const disableHover = () => {isTouchscreen = true; window.removeEventListener("touchstart", disableHover);};
@@ -19,7 +20,7 @@ export const addStylesEventListener = () => {
         useState("actualLabel", e.target.nextElementSibling);
 
         state.actualCheckbox.checked = !state.actualCheckbox.checked;
-
+        tasks[+e.target.getAttribute("id")].isDone = state.actualCheckbox.checked;
             if(state.actualCheckbox.checked){
                 e.target.classList.add("checked");
                 state.actualLabel.classList.add("checked");
