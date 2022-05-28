@@ -1,4 +1,4 @@
- export const tasks = [
+ export let tasks = [
     {
         "toDo": "Change Project!", 
         "isDone": false 
@@ -19,4 +19,4 @@
         "toDo": "Improve!", 
         "isDone": false 
     }
-]
+];
