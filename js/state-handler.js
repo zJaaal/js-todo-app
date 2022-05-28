@@ -1,35 +1,25 @@
 
-import { projects } from "../js/state.js";
+import { tasks } from "../js/state.js";
 import { addStylesEventListener } from "../js/style-events.js";
-import { createGroupRow, createProject } from "../js/utilities.js";
-const renderCurrentProject = (e) =>{
-    let index;
-    
-    if(!e){
-        index = "0";
-    }else
-        index = e.target.getAttribute("id");
+import { createGroupRow} from "../js/utilities.js";
 
-    const btnText = document.querySelector(".btn-text");
-    btnText.innerHTML = projects[index].name;
+const renderCurrentProject = () =>{
 
     const checkboxGroup = document.querySelector(".checkbox-group");
     checkboxGroup.innerHTML = "";
 
     let fragment = document.createDocumentFragment();
 
-    projects[index].tasks.forEach( (task, i) =>{
-        fragment.appendChild(createGroupRow(task, i));
+    tasks.forEach((task, i) =>{
+        console.log(task);
+        fragment.appendChild(createGroupRow(task.toDo, i));
     })
 
     checkboxGroup.appendChild(fragment);
     addStylesEventListener();
 }
-
 const dropdownItems = document.querySelectorAll(".dropdown-item");
-
 dropdownItems.forEach(element =>{
     element.addEventListener("click", renderCurrentProject);
 })
-
 renderCurrentProject();
